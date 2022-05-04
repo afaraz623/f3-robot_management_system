@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "name": "STM32",
+      "includePath": [
+        "Core/Inc",
+        "Drivers/CMSIS/Device/ST/STM32F3xx/Include",
+        "Drivers/CMSIS/Include",
+        "Drivers/STM32F3xx_HAL_Driver/Inc",
+        "Drivers/STM32F3xx_HAL_Driver/Inc/Legacy"
+      ],
+      "defines": [
+        "STM32F303xC",
+        "USE_HAL_DRIVER"
+      ],
+      "compilerPath": "C:\\DEV\\DEV_TOOLS\\GCC-ARM-NONE-EABI-10.3-2021.10\\BIN\\ARM-NONE-EABI-GCC.EXE"
+    }
+  ],
+  "version": 4
+}

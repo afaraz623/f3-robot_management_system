@@ -1,0 +1,327 @@
+ARM GAS  C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu fpv4-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"tim.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.MX_TIM16_Init,"ax",%progbits
+  20              		.align	1
+  21              		.global	MX_TIM16_Init
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	MX_TIM16_Init:
+  27              	.LFB130:
+  28              		.file 1 "Core/Src/tim.c"
+   1:Core/Src/tim.c **** /* USER CODE BEGIN Header */
+   2:Core/Src/tim.c **** /**
+   3:Core/Src/tim.c ****   ******************************************************************************
+   4:Core/Src/tim.c ****   * @file    tim.c
+   5:Core/Src/tim.c ****   * @brief   This file provides code for the configuration
+   6:Core/Src/tim.c ****   *          of the TIM instances.
+   7:Core/Src/tim.c ****   ******************************************************************************
+   8:Core/Src/tim.c ****   * @attention
+   9:Core/Src/tim.c ****   *
+  10:Core/Src/tim.c ****   * Copyright (c) 2022 STMicroelectronics.
+  11:Core/Src/tim.c ****   * All rights reserved.
+  12:Core/Src/tim.c ****   *
+  13:Core/Src/tim.c ****   * This software is licensed under terms that can be found in the LICENSE file
+  14:Core/Src/tim.c ****   * in the root directory of this software component.
+  15:Core/Src/tim.c ****   * If no LICENSE file comes with this software, it is provided AS-IS.
+  16:Core/Src/tim.c ****   *
+  17:Core/Src/tim.c ****   ******************************************************************************
+  18:Core/Src/tim.c ****   */
+  19:Core/Src/tim.c **** /* USER CODE END Header */
+  20:Core/Src/tim.c **** /* Includes ------------------------------------------------------------------*/
+  21:Core/Src/tim.c **** #include "tim.h"
+  22:Core/Src/tim.c **** 
+  23:Core/Src/tim.c **** /* USER CODE BEGIN 0 */
+  24:Core/Src/tim.c **** 
+  25:Core/Src/tim.c **** /* USER CODE END 0 */
+  26:Core/Src/tim.c **** 
+  27:Core/Src/tim.c **** TIM_HandleTypeDef htim16;
+  28:Core/Src/tim.c **** 
+  29:Core/Src/tim.c **** /* TIM16 init function */
+  30:Core/Src/tim.c **** void MX_TIM16_Init(void)
+ARM GAS  C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s 			page 2
+
+
+  31:Core/Src/tim.c **** {
+  29              		.loc 1 31 1 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              	.LCFI0:
+  35              		.cfi_def_cfa_offset 8
+  36              		.cfi_offset 3, -8
+  37              		.cfi_offset 14, -4
+  32:Core/Src/tim.c **** 
+  33:Core/Src/tim.c ****   /* USER CODE BEGIN TIM16_Init 0 */
+  34:Core/Src/tim.c **** 
+  35:Core/Src/tim.c ****   /* USER CODE END TIM16_Init 0 */
+  36:Core/Src/tim.c **** 
+  37:Core/Src/tim.c ****   /* USER CODE BEGIN TIM16_Init 1 */
+  38:Core/Src/tim.c **** 
+  39:Core/Src/tim.c ****   /* USER CODE END TIM16_Init 1 */
+  40:Core/Src/tim.c ****   htim16.Instance = TIM16;
+  38              		.loc 1 40 3 view .LVU1
+  39              		.loc 1 40 19 is_stmt 0 view .LVU2
+  40 0002 0B48     		ldr	r0, .L5
+  41 0004 0B4B     		ldr	r3, .L5+4
+  42 0006 0360     		str	r3, [r0]
+  41:Core/Src/tim.c ****   htim16.Init.Prescaler = 36000 - 1;
+  43              		.loc 1 41 3 is_stmt 1 view .LVU3
+  44              		.loc 1 41 25 is_stmt 0 view .LVU4
+  45 0008 48F69F43 		movw	r3, #35999
+  46 000c 4360     		str	r3, [r0, #4]
+  42:Core/Src/tim.c ****   htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
+  47              		.loc 1 42 3 is_stmt 1 view .LVU5
+  48              		.loc 1 42 27 is_stmt 0 view .LVU6
+  49 000e 0023     		movs	r3, #0
+  50 0010 8360     		str	r3, [r0, #8]
+  43:Core/Src/tim.c ****   htim16.Init.Period = 20000;
+  51              		.loc 1 43 3 is_stmt 1 view .LVU7
+  52              		.loc 1 43 22 is_stmt 0 view .LVU8
+  53 0012 44F62062 		movw	r2, #20000
+  54 0016 C260     		str	r2, [r0, #12]
+  44:Core/Src/tim.c ****   htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  55              		.loc 1 44 3 is_stmt 1 view .LVU9
+  56              		.loc 1 44 29 is_stmt 0 view .LVU10
+  57 0018 0361     		str	r3, [r0, #16]
+  45:Core/Src/tim.c ****   htim16.Init.RepetitionCounter = 0;
+  58              		.loc 1 45 3 is_stmt 1 view .LVU11
+  59              		.loc 1 45 33 is_stmt 0 view .LVU12
+  60 001a 4361     		str	r3, [r0, #20]
+  46:Core/Src/tim.c ****   htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
+  61              		.loc 1 46 3 is_stmt 1 view .LVU13
+  62              		.loc 1 46 33 is_stmt 0 view .LVU14
+  63 001c 8023     		movs	r3, #128
+  64 001e 8361     		str	r3, [r0, #24]
+  47:Core/Src/tim.c ****   if (HAL_TIM_Base_Init(&htim16) != HAL_OK)
+  65              		.loc 1 47 3 is_stmt 1 view .LVU15
+  66              		.loc 1 47 7 is_stmt 0 view .LVU16
+  67 0020 FFF7FEFF 		bl	HAL_TIM_Base_Init
+  68              	.LVL0:
+ARM GAS  C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s 			page 3
+
+
+  69              		.loc 1 47 6 view .LVU17
+  70 0024 00B9     		cbnz	r0, .L4
+  71              	.L1:
+  48:Core/Src/tim.c ****   {
+  49:Core/Src/tim.c ****     Error_Handler();
+  50:Core/Src/tim.c ****   }
+  51:Core/Src/tim.c ****   /* USER CODE BEGIN TIM16_Init 2 */
+  52:Core/Src/tim.c **** 
+  53:Core/Src/tim.c ****   /* USER CODE END TIM16_Init 2 */
+  54:Core/Src/tim.c **** 
+  55:Core/Src/tim.c **** }
+  72              		.loc 1 55 1 view .LVU18
+  73 0026 08BD     		pop	{r3, pc}
+  74              	.L4:
+  49:Core/Src/tim.c ****   }
+  75              		.loc 1 49 5 is_stmt 1 view .LVU19
+  76 0028 FFF7FEFF 		bl	Error_Handler
+  77              	.LVL1:
+  78              		.loc 1 55 1 is_stmt 0 view .LVU20
+  79 002c FBE7     		b	.L1
+  80              	.L6:
+  81 002e 00BF     		.align	2
+  82              	.L5:
+  83 0030 00000000 		.word	.LANCHOR0
+  84 0034 00440140 		.word	1073824768
+  85              		.cfi_endproc
+  86              	.LFE130:
+  88              		.section	.text.HAL_TIM_Base_MspInit,"ax",%progbits
+  89              		.align	1
+  90              		.global	HAL_TIM_Base_MspInit
+  91              		.syntax unified
+  92              		.thumb
+  93              		.thumb_func
+  95              	HAL_TIM_Base_MspInit:
+  96              	.LVL2:
+  97              	.LFB131:
+  56:Core/Src/tim.c **** 
+  57:Core/Src/tim.c **** void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* tim_baseHandle)
+  58:Core/Src/tim.c **** {
+  98              		.loc 1 58 1 is_stmt 1 view -0
+  99              		.cfi_startproc
+ 100              		@ args = 0, pretend = 0, frame = 8
+ 101              		@ frame_needed = 0, uses_anonymous_args = 0
+ 102              		@ link register save eliminated.
+  59:Core/Src/tim.c **** 
+  60:Core/Src/tim.c ****   if(tim_baseHandle->Instance==TIM16)
+ 103              		.loc 1 60 3 view .LVU22
+ 104              		.loc 1 60 20 is_stmt 0 view .LVU23
+ 105 0000 0268     		ldr	r2, [r0]
+ 106              		.loc 1 60 5 view .LVU24
+ 107 0002 094B     		ldr	r3, .L14
+ 108 0004 9A42     		cmp	r2, r3
+ 109 0006 00D0     		beq	.L13
+ 110 0008 7047     		bx	lr
+ 111              	.L13:
+  58:Core/Src/tim.c **** 
+ 112              		.loc 1 58 1 view .LVU25
+ARM GAS  C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s 			page 4
+
+
+ 113 000a 82B0     		sub	sp, sp, #8
+ 114              	.LCFI1:
+ 115              		.cfi_def_cfa_offset 8
+  61:Core/Src/tim.c ****   {
+  62:Core/Src/tim.c ****   /* USER CODE BEGIN TIM16_MspInit 0 */
+  63:Core/Src/tim.c **** 
+  64:Core/Src/tim.c ****   /* USER CODE END TIM16_MspInit 0 */
+  65:Core/Src/tim.c ****     /* TIM16 clock enable */
+  66:Core/Src/tim.c ****     __HAL_RCC_TIM16_CLK_ENABLE();
+ 116              		.loc 1 66 5 is_stmt 1 view .LVU26
+ 117              	.LBB2:
+ 118              		.loc 1 66 5 view .LVU27
+ 119              		.loc 1 66 5 view .LVU28
+ 120 000c 03F54C43 		add	r3, r3, #52224
+ 121 0010 9A69     		ldr	r2, [r3, #24]
+ 122 0012 42F40032 		orr	r2, r2, #131072
+ 123 0016 9A61     		str	r2, [r3, #24]
+ 124              		.loc 1 66 5 view .LVU29
+ 125 0018 9B69     		ldr	r3, [r3, #24]
+ 126 001a 03F40033 		and	r3, r3, #131072
+ 127 001e 0193     		str	r3, [sp, #4]
+ 128              		.loc 1 66 5 view .LVU30
+ 129 0020 019B     		ldr	r3, [sp, #4]
+ 130              	.LBE2:
+ 131              		.loc 1 66 5 view .LVU31
+  67:Core/Src/tim.c ****   /* USER CODE BEGIN TIM16_MspInit 1 */
+  68:Core/Src/tim.c **** 
+  69:Core/Src/tim.c ****   /* USER CODE END TIM16_MspInit 1 */
+  70:Core/Src/tim.c ****   }
+  71:Core/Src/tim.c **** }
+ 132              		.loc 1 71 1 is_stmt 0 view .LVU32
+ 133 0022 02B0     		add	sp, sp, #8
+ 134              	.LCFI2:
+ 135              		.cfi_def_cfa_offset 0
+ 136              		@ sp needed
+ 137 0024 7047     		bx	lr
+ 138              	.L15:
+ 139 0026 00BF     		.align	2
+ 140              	.L14:
+ 141 0028 00440140 		.word	1073824768
+ 142              		.cfi_endproc
+ 143              	.LFE131:
+ 145              		.section	.text.HAL_TIM_Base_MspDeInit,"ax",%progbits
+ 146              		.align	1
+ 147              		.global	HAL_TIM_Base_MspDeInit
+ 148              		.syntax unified
+ 149              		.thumb
+ 150              		.thumb_func
+ 152              	HAL_TIM_Base_MspDeInit:
+ 153              	.LVL3:
+ 154              	.LFB132:
+  72:Core/Src/tim.c **** 
+  73:Core/Src/tim.c **** void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* tim_baseHandle)
+  74:Core/Src/tim.c **** {
+ 155              		.loc 1 74 1 is_stmt 1 view -0
+ 156              		.cfi_startproc
+ 157              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s 			page 5
+
+
+ 158              		@ frame_needed = 0, uses_anonymous_args = 0
+ 159              		@ link register save eliminated.
+  75:Core/Src/tim.c **** 
+  76:Core/Src/tim.c ****   if(tim_baseHandle->Instance==TIM16)
+ 160              		.loc 1 76 3 view .LVU34
+ 161              		.loc 1 76 20 is_stmt 0 view .LVU35
+ 162 0000 0268     		ldr	r2, [r0]
+ 163              		.loc 1 76 5 view .LVU36
+ 164 0002 054B     		ldr	r3, .L19
+ 165 0004 9A42     		cmp	r2, r3
+ 166 0006 00D0     		beq	.L18
+ 167              	.L16:
+  77:Core/Src/tim.c ****   {
+  78:Core/Src/tim.c ****   /* USER CODE BEGIN TIM16_MspDeInit 0 */
+  79:Core/Src/tim.c **** 
+  80:Core/Src/tim.c ****   /* USER CODE END TIM16_MspDeInit 0 */
+  81:Core/Src/tim.c ****     /* Peripheral clock disable */
+  82:Core/Src/tim.c ****     __HAL_RCC_TIM16_CLK_DISABLE();
+  83:Core/Src/tim.c ****   /* USER CODE BEGIN TIM16_MspDeInit 1 */
+  84:Core/Src/tim.c **** 
+  85:Core/Src/tim.c ****   /* USER CODE END TIM16_MspDeInit 1 */
+  86:Core/Src/tim.c ****   }
+  87:Core/Src/tim.c **** }
+ 168              		.loc 1 87 1 view .LVU37
+ 169 0008 7047     		bx	lr
+ 170              	.L18:
+  82:Core/Src/tim.c ****   /* USER CODE BEGIN TIM16_MspDeInit 1 */
+ 171              		.loc 1 82 5 is_stmt 1 view .LVU38
+ 172 000a 044A     		ldr	r2, .L19+4
+ 173 000c 9369     		ldr	r3, [r2, #24]
+ 174 000e 23F40033 		bic	r3, r3, #131072
+ 175 0012 9361     		str	r3, [r2, #24]
+ 176              		.loc 1 87 1 is_stmt 0 view .LVU39
+ 177 0014 F8E7     		b	.L16
+ 178              	.L20:
+ 179 0016 00BF     		.align	2
+ 180              	.L19:
+ 181 0018 00440140 		.word	1073824768
+ 182 001c 00100240 		.word	1073876992
+ 183              		.cfi_endproc
+ 184              	.LFE132:
+ 186              		.global	htim16
+ 187              		.section	.bss.htim16,"aw",%nobits
+ 188              		.align	2
+ 189              		.set	.LANCHOR0,. + 0
+ 192              	htim16:
+ 193 0000 00000000 		.space	76
+ 193      00000000 
+ 193      00000000 
+ 193      00000000 
+ 193      00000000 
+ 194              		.text
+ 195              	.Letext0:
+ 196              		.file 2 "c:\\dev\\dev_tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\machine\\_def
+ 197              		.file 3 "c:\\dev\\dev_tools\\gcc-arm-none-eabi-10.3-2021.10\\arm-none-eabi\\include\\sys\\_stdint.
+ 198              		.file 4 "Drivers/CMSIS/Device/ST/STM32F3xx/Include/stm32f303xc.h"
+ 199              		.file 5 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_def.h"
+ARM GAS  C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s 			page 6
+
+
+ 200              		.file 6 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_dma.h"
+ 201              		.file 7 "Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_tim.h"
+ 202              		.file 8 "Core/Inc/main.h"
+ 203              		.file 9 "Core/Inc/tim.h"
+ARM GAS  C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 tim.c
+C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s:20     .text.MX_TIM16_Init:00000000 $t
+C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s:26     .text.MX_TIM16_Init:00000000 MX_TIM16_Init
+C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s:83     .text.MX_TIM16_Init:00000030 $d
+C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s:89     .text.HAL_TIM_Base_MspInit:00000000 $t
+C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s:95     .text.HAL_TIM_Base_MspInit:00000000 HAL_TIM_Base_MspInit
+C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s:141    .text.HAL_TIM_Base_MspInit:00000028 $d
+C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s:146    .text.HAL_TIM_Base_MspDeInit:00000000 $t
+C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s:152    .text.HAL_TIM_Base_MspDeInit:00000000 HAL_TIM_Base_MspDeInit
+C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s:181    .text.HAL_TIM_Base_MspDeInit:00000018 $d
+C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s:192    .bss.htim16:00000000 htim16
+C:\Users\afara\AppData\Local\Temp\cc1rJ1Ro.s:188    .bss.htim16:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_TIM_Base_Init
+Error_Handler

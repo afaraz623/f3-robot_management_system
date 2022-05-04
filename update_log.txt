@@ -1,0 +1,5 @@
+update 1: setup adc1 with dma
+update 2: setup usart4 and adc with dma
+update 3: setup multi-channel adc conversions, added averaging per adc channel and added case swtich offsets per adc channel 
+update 4: setup timer 16 and made usart transmission non blocking code
+update 5: changed non blocking to 10 seconds, added total battery voltage reading and updated/added some comments
